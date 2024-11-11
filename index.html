@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Normal site</title>
+</head>
+<body>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            align-items: center;
+            justify-content: center;
+        }
+
+        button {
+            background-color: lime;
+            cursor: pointer;
+            height: 100px;
+            width: 300px;
+            margin-right: 20px;
+        }
+    </style>
+    <button id="rickroll">Are you sure!!?</button>
+    <button id="sure?" style="display: none;">You sure?</button>
+    <video id="video" src="Rick Astley - Never Gonna Give You Up (Official Music Video) - YouTube — Firefox Developer Edition 2024-11-10 21-12-26.mp4" style="display: none;" autoplay></video>
+    <button id="warm">Warm up</button>
+    <video src="e.mp4" id="p" autoplay></video>
+    <script>
+        var r = document.getElementById('rickroll');
+        var warm = document.getElementById('warm');
+        r.onclick = function() {
+            r.style.display = 'none';
+            document.getElementById('sure?').style.display = 'block';
+        }
+        document.getElementById('sure?').onclick = function(){
+            document.getElementById('video').style.display = 'block';
+            document.getElementById('sure?').style.display = 'none';
+        }
+
+        var d = document.getElementById('warm');
+
+        d.onclick = function() {
+            d.style.display = 'none';
+            document.getElementById('p').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
